@@ -16,9 +16,7 @@ const Applications = () => {
       }
       const data = await response.json();
       return data;
-    } catch (error) {
-
-    }
+    } catch (error) {}
   }
 
   useEffect(() => {
@@ -35,7 +33,7 @@ const Applications = () => {
     <div>
       <div className={styles.Applications}>
         {applicationData?.map((application) => (
-          <SingleApplication application={application} />
+          <SingleApplication key={application.guid} application={application} />
         ))}
       </div>
       <div className="button">

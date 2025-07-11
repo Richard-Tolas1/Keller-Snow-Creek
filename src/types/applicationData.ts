@@ -5,5 +5,6 @@ export interface ApplicationData {
   last_name: string;
   company: string;
   email: string;
+  date_created: string;
   expiry_date: string;
 }
